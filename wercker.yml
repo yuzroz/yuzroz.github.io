@@ -6,7 +6,7 @@ build:
         code: |
           sudo yum update -y
           sudo yum install -y epel-release
-          sudo yum install -y nodejs npm gcc gcc-c++
+          sudo yum install -y nodejs npm git gcc gcc-c++
           rpm -qa
     - wercker/npm-install@1.1.4:
         clear-cache-on-failed: true
