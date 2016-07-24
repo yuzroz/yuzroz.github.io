@@ -1,0 +1,57 @@
+@charset "utf-8";
+
+.sidebar {
+  margin-top: 3rem;
+
+  &-section {
+    margin-bottom: 1.5rem;
+
+    header {
+      box-shadow: 0 -1px 0 $clr-grey-200 inset;
+      margin-bottom: 1rem;
+
+      .title {
+        font-weight: bold;
+        position: relative;
+        display: inline-block;
+        border-bottom: 1px solid $clr-black;
+        padding: .5rem 0;
+        padding-right: 1rem;
+        color: $clr-grey-900;
+      }
+    }
+  }
+
+  @mixin taxonomy_cloud {
+    a {
+      display: inline-block;
+      font-size: .8rem;
+      text-decoration: none;
+      line-height: 1.5rem;
+      color: $clr-blue-grey-700;
+      font-weight: bold;
+      margin-right: 5px;
+
+      &:before {
+        content: "#";
+        font-family: "Fontawesome";
+        margin-right: -2px;
+        color: $clr-teal;
+      }
+    }
+  }
+
+  &-taxonomies {
+    @include taxonomy_cloud;
+  }
+
+  &-codenames {
+    @include taxonomy_cloud;
+    a {
+      &:before {
+        content: "✘";
+        color: $clr-pink-200;
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+@charset "utf-8";
+
+
+.paging {
+  position: relative;
+  width: 100%;
+
+  &__inner {
+    display: table;
+    background-color: $clr-grey-200;
+    width: 100%;
+
+    > a,
+      span {
+      text-decoration: none;
+      vertical-align: middle;
+      display: table-cell;
+      color: $clr-grey-400;
+      width: 40%;
+      height: 5rem;
+
+      &:last-child {
+        text-align: right;
+      }
+
+      > i {
+        position: relative;
+        top: 3px;
+      }
+    }
+  }
+
+  &-nav {
+    font-weight: bold;
+    display: table-cell;
+    width: 20%;
+    color: $clr-grey-400;
+    height: 5rem;
+    text-align: center;
+    vertical-align: middle;
+  }
+}

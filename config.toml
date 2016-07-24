@@ -1,0 +1,39 @@
+baseurl = "http://yuzroz.github.io"
+title = "yuzroz"
+author = ""
+copyright = ""
+canonifyurls = true
+paginate = 10
+
+builddrafts = false
+contentdir = "content"
+layoutdir = "layouts"
+publishdir = "public"
+
+googleAnalytics = ""
+languageCode = "ja-JP"
+
+staticdir = "static"
+
+theme = "scaffold"
+hasCJKLanguage = true
+
+preserveTaxonomyNames = true
+
+[taxonomies]
+tag = "tags"
+
+[params]
+    TitleHead = ""
+    SubTitle = ""
+    GoogleSiteVerification = ""
+    GoogleAnalyticsCrossDomain = false
+    NumRelatedPosts = 6
+    KeyRelatedPosts = "tags"
+    TwitterAccount = "yuzroz"
+    PostAlias = "記事"
+
+[blackfriday]
+    # plainIDAnchors = true
+    # hrefTargetBlank = true
+    extensions = ["hardLineBreak"]

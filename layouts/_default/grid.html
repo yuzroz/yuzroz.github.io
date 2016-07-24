@@ -1,0 +1,30 @@
+<article class="grid">
+  <a href="{{ .Permalink }}">
+    {{ with .Params.image }}
+    <div class="grid-image" style="background-image: url({{ . }});"></div>
+    {{ else }}
+    <div class="grid-image"></div>
+    {{ end }}
+    <footer class="grid-footer">
+      <h2 class="grid-title">{{ .Title }}</h2>
+      <div class="grid-summary">{{ .Summary }}</div>
+      <p class="grid-info">
+        <time class="grid-info__time">
+          {{ with .Site.Params.DateForm }}
+          {{ $.Date.Format . }}
+          {{ else }}
+          {{ $.Date.Format "2006.1.2" }}
+          {{ end }}
+        </time>
+        {{ with .Params.categories }}
+        {{ range first 1 . }}
+        <span>{{ . }}</span>
+        {{ end }}
+        {{ end }}
+        <span class="grid-info__count">
+          <i class="material-icons md-12">sms</i>{{ len .Params.link.comments }}
+        </span>
+      </p>
+    </footer>
+  </a>
+</article>

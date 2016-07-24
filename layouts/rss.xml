@@ -1,0 +1,40 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ .Site.Title }} </title>
+    <link>{{ .Permalink }}</link>
+    <description>Recent content {{ with .Title }}in {{.}} {{ end }}on {{ .Site.Title }}</description>
+    {{ if .Site.LanguageCode }}
+    <language>{{ .Site.LanguageCode }}</language>
+    {{ end }}
+    {{ if .Site.Params.Author }}
+    <author>{{ .Site.Params.Author }}</author>
+    {{ end }}
+    <rights>(C) {{ .Site.LastChange.Year }}</rights>
+    <updated>{{ .Date }}</updated>
+    {{ if not .Date.IsZero }}
+    <lastBuildDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</lastBuildDate>
+    {{ end }}
+    <docs>{{ .URL }}</docs>
+    <atom:link href="{{ .URL }}" rel="self" type="application/rss+xml" />
+
+    {{ range .Data.Pages }}
+      {{ if (and (ne .Type "matome") (ne .Type "news")) }}
+        <item>
+          <title>{{ .Title }}</title>
+          <link>{{ .Permalink }}</link>
+          <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 MST" }}</pubDate>
+          {{ if .Site.Params.Author }}<author>{{ .Site.Params.Author }}</author>{{ end }}
+          <guid>{{ .Permalink }}</guid>
+          <description>{{ .Summary | html }}</description>
+        </item>
+      {{ else }}
+        <item>
+          <title>{{ .Title }}</title>
+          <link>{{ .Permalink }}</link>
+          <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 MST" }}</pubDate>
+          <guid>{{ .Permalink }}</guid>
+        </item>
+      {{ end }}
+    {{ end }}
+  </channel>
+</rss>

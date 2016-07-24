@@ -1,0 +1,95 @@
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  var hosts = [
+    'news.100kin.yogurt.blue',
+    'news.1trip.yogurt.blue',
+    'news.ai.yogurt.blue',
+    'news.akb48.yogurt.blue',
+    'news.app.yogurt.blue',
+    'news.apple.yogurt.blue',
+    'news.asakusa.yogurt.blue',
+    'news.baseball.yogurt.blue',
+    'news.blackthunder.yogurt.blue',
+    'news.book.yogurt.blue',
+    'news.brazil.yogurt.blue',
+    'news.career.yogurt.blue',
+    'news.choice.yogurt.blue',
+    'news.coriander.yogurt.blue',
+    'news.cosplay.yogurt.blue',
+    'news.curry.yogurt.blue',
+    'news.darenogare.yogurt.blue',
+    'news.disney.yogurt.blue',
+    'news.fashion.yogurt.blue',
+    'news.gg.yogurt.blue',
+    'news.government.yogurt.blue',
+    'news.grandtheftauto.yogurt.blue',
+    'news.hairstyle.yogurt.blue',
+    'news.healthcare.yogurt.blue',
+    'news.hoiku.yogurt.blue',
+    'news.hukugyo.yogurt.blue',
+    'news.hunterhunterzip.yogurt.blue',
+    'news.ibaraki.yogurt.blue',
+    'news.ichiro.yogurt.blue',
+    'news.ieyasu.yogurt.blue',
+    'news.ijyu.yogurt.blue',
+    'news.interior.yogurt.blue',
+    'news.jojozip.yogurt.blue',
+    'news.jumpzip.yogurt.blue',
+    'news.kakuto.yogurt.blue',
+    'news.kannachan.yogurt.blue',
+    'news.kashikoi.yogurt.blue',
+    'news.kekkon.yogurt.blue',
+    'news.kindle.yogurt.blue',
+    'news.kindomzip.yogurt.blue',
+    'news.kishiasuka.yogurt.blue',
+    'news.korea.yogurt.blue',
+    'news.kosodate.yogurt.blue',
+    'news.kyoto.yogurt.blue',
+    'news.masuzoe.yogurt.blue',
+    'news.matome.yogurt.blue',
+    'news.mayuge.yogurt.blue',
+    'news.mobilesim.yogurt.blue',
+    'news.mogamimoga.yogurt.blue',
+    'news.monst.yogurt.blue',
+    'news.muscle.yogurt.blue',
+    'news.neko.yogurt.blue',
+    'news.nobunaga.yogurt.blue',
+    'news.nogisaka46.yogurt.blue',
+    'news.okinawa.yogurt.blue',
+    'news.onepiecezip.yogurt.blue',
+    'news.onsen.yogurt.blue',
+    'news.oriragi.yogurt.blue',
+    'news.pazdra.yogurt.blue',
+    'news.pokemon.yogurt.blue',
+    'news.ramen.yogurt.blue',
+    'news.refugees.yogurt.blue',
+    'news.reinachann.yogurt.blue',
+    'news.sanadamaru.yogurt.blue',
+    'news.sasakinozomi.yogurt.blue',
+    'news.seiyu.yogurt.blue',
+    'news.smartwatch.yogurt.blue',
+    'news.soccer.yogurt.blue',
+    'news.space.yogurt.blue',
+    'news.starrysky.yogurt.blue',
+    'news.sweets.yogurt.blue',
+    'news.syukatsu.yogurt.blue',
+    'news.tokyoghoulzip.yogurt.blue',
+    'news.travel.yogurt.blue',
+    'news.trump.yogurt.blue',
+    'news.yakult.yogurt.blue'
+  ]
+  var i = hosts.indexOf('{{ .Site.BaseURL }}'.replace(/(^.*?:\/\/)|(\/$)/g, ""));
+  if(i != -1) {
+      hosts.splice(i, 1);
+  }
+
+  ga('create', '{{ .Site.GoogleAnalytics }}', 'auto', {'allowLinker': true});
+  ga('send', 'pageview');
+  ga('require', 'linker');
+  ga('linker:autoLink', hosts );
+
+</script>

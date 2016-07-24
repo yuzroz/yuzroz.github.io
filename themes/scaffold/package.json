@@ -1,0 +1,25 @@
+{
+  "name": "scaffold",
+  "description": "Hugo theme",
+  "version": "0.0.1",
+  "homepage": "",
+  "license": "MIT",
+  "author": "",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "bugs": {
+    "type": "git",
+    "url": ""
+  },
+  "main": "",
+  "scripts": {},
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {
+    "normalize.css": "^4.2.0"
+  },
+  "devDependencies": {}
+}

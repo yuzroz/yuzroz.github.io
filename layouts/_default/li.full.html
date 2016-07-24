@@ -1,0 +1,23 @@
+<article class="li">
+  <a href="{{ .Permalink }}">
+    <div class="detail">
+      <h2 class="title">{{ .Title }}</h2>
+      <div class="summary">{{ .Summary }}</div>
+      <span class="li-info">
+        <time class="li-info__time">
+          {{ with .Site.Params.DateForm }}
+          {{ $.Date.Format . }}
+          {{ else }}
+          {{ $.Date.Format "2006年1月2日" }}
+          {{ end }}
+        </time>
+        <span class="li-info__count">
+          <i class="material-icons">remove_red_eye</i>{{ .Params.views }}
+        </span>
+      </span>
+    </div>
+    {{ with .Params.image }}
+    <div class="image" style="background-image: url({{ . }});"></div>
+    {{ end }}
+  </a>
+</article>

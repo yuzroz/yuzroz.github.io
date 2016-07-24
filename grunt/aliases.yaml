@@ -1,0 +1,16 @@
+# grunt task
+
+# development supports
+default:
+  - 'clean:build'
+  - 'injector:sass_global'
+  - 'injector:sass'
+  - 'sass:app'
+  - 'autoprefixer:dist'
+  - 'esteWatch'
+deploy:
+  - 'clean:build'
+  - 'injector:sass_global'
+  - 'injector:sass'
+  - 'sass:app'
+  - 'autoprefixer:dist'

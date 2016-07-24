@@ -1,0 +1,239 @@
+@charset "utf-8";
+
+.index {
+  @media #{$media-desktop} {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 120px 0 100px 0;
+
+    &-profile {
+      display: flex;
+      flex-flow: row wrap;
+      width: 230px;
+      margin: 0 auto;
+
+      > div {
+        vertical-align: top;
+      }
+
+      &__me {
+        position: relative;
+        flex-basis: 30%;
+
+        > div {
+          width: 57px;
+          margin: 0 auto;
+
+          img {
+            border-radius: 28.5px;
+            border: 1px solid $clr-grey-200;
+          }
+        }
+      }
+
+      &__detail {
+        flex-basis: 70%;
+
+        > h2 {
+          @include gradient-text('Yuzuru Ozawa:', transparent, linear-gradient(135deg, rgba(1, 244, 171, 1) 0%, rgba(71, 139, 255, 1) 100%));
+          display: inline-block;
+          font-weight: normal;
+        }
+
+        > h3 {
+          font-size: 20px;
+          font-weight: 300;
+          color: $clr-grey-400;
+          font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+          font-style: normal;
+        }
+      }
+
+      &__sns {
+        flex-basis: 100%;
+
+        ul {
+          text-align: center;
+          font-size: 1rem;
+          margin: 20px 0 0 0;
+
+          li {
+            display: inline-block;
+
+            a {
+              > i {
+                padding: 3px;
+                border-radius: 2px;
+                background-color: $clr-github;
+                color: $clr-white;
+                margin: 0 1px;
+              }
+
+              > .icon-twitter {
+                background-color: $clr-twitter;
+              }
+
+              > .icon-facebook {
+                background-color: $clr-facebook;
+              }
+
+              > .icon-qiita {
+                background-color: $clr-qiita;
+                padding: 0 3px 3px 0;
+                font-size: 1.15rem;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &-main {
+      border-top: 1px solid $clr-grey-200;
+      max-width: 520px;
+      margin: 40px auto 0 auto;
+      padding: 40px 0 20px 0;
+
+      p {
+        line-height: 1.7;
+      }
+
+      hr {
+        display: block;
+        border: 0;
+        height: 1px;
+        margin: 40px auto;
+        background: $clr-grey-200;
+      }
+    }
+
+    &-footer {
+      p {
+        color: $clr-grey-300;
+        font-size: 14px;
+        line-height: 1.5;
+        display: block;
+        text-align: center;
+        margin-top: 20px;
+      }
+    }
+  }
+
+  @media #{$media-non-desktop} {
+    max-width: 85%;
+    margin: 0 auto;
+    padding: 60px 0 100px 0;
+
+    &-profile {
+      display: flex;
+      flex-flow: row wrap;
+      width: 230px;
+      margin: 0 auto;
+
+      > div {
+        vertical-align: top;
+      }
+
+      &__me {
+        position: relative;
+        flex-basis: 30%;
+
+        > div {
+          width: 57px;
+          margin: 0 auto;
+
+          img {
+            border-radius: 28.5px;
+            border: 1px solid $clr-grey-200;
+          }
+        }
+      }
+
+      &__detail {
+        flex-basis: 70%;
+
+        > h2 {
+          @include gradient-text('Yuzuru Ozawa:', transparent, linear-gradient(135deg, rgba(1, 244, 171, 1) 0%, rgba(71, 139, 255, 1) 100%));
+          display: inline-block;
+          font-weight: normal;
+        }
+
+        > h3 {
+          font-size: 20px;
+          font-weight: 300;
+          color: $clr-grey-400;
+          font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+          font-style: normal;
+        }
+      }
+
+      &__sns {
+        flex-basis: 100%;
+
+        ul {
+          text-align: center;
+          font-size: 1rem;
+          margin: 20px 0 0 0;
+
+          li {
+            display: inline-block;
+
+            a {
+              > i {
+                padding: 3px;
+                border-radius: 2px;
+                background-color: $clr-github;
+                color: $clr-white;
+                margin: 0 1px;
+              }
+
+              > .icon-twitter {
+                background-color: $clr-twitter;
+              }
+
+              > .icon-facebook {
+                background-color: $clr-facebook;
+              }
+
+              > .icon-qiita {
+                background-color: $clr-qiita;
+                padding: 0 3px 3px 0;
+                font-size: 1.15rem;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &-main {
+      border-top: 1px solid $clr-grey-200;
+      max-width: 85%;
+      margin: 40px auto 0 auto;
+      padding: 40px 0 20px 0;
+
+      p {
+        line-height: 1.7;
+      }
+
+      hr {
+        display: block;
+        border: 0;
+        height: 1px;
+        margin: 40px auto;
+        background: $clr-grey-200;
+      }
+    }
+
+    &-footer {
+      p {
+        color: $clr-grey-300;
+        font-size: 14px;
+        line-height: 1.5;
+        display: block;
+        text-align: center;
+        margin-top: 20px;
+      }
+    }
+  }
+}

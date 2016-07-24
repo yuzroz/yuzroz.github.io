@@ -1,0 +1,12 @@
+{{ define "main" }}
+  <div class="external-link">
+    <div class="external-link-main">
+      <a class="external-link-url" href="javascript:void(0)"></a><br>
+      別のサイトにジャンプしようとしています。宜しければ上記のリンクをクリックしてください
+    </div>
+    <div class="external-link-info">
+      <a class="external-link-host" href="javascript:void(0)">戻る</a>
+    </div>
+  </div>
+  <script type="text/javascript" charset="utf-8" src="{{ .Site.BaseURL }}/js/external-link.js"></script>
+{{ end }}

@@ -1,0 +1,27 @@
+<article class="li-matome">
+  <a href="{{ .Permalink }}" target="_blank">
+    {{ with .Params.image }}
+    <div class="li-matome-image" style="background-image: url({{ . }});"></div>
+    {{ end }}
+    <div class="li-matome-detail">
+      <h2 class="li-matome-title">{{ .Title }}</h2>
+      <p class="li-matome-info">
+        <time class="li-matome-info__time">
+          {{ with .Site.Params.DateForm }}
+          {{ $.Date.Format . }}
+          {{ else }}
+          {{ $.Date.Format "1月2日" }}
+          {{ end }}
+        </time>
+        {{ with .Params.tags }}
+        {{ range first 1 . }}
+        <!-- <span class="li-matome-info__tags">{{ . }}</span> -->
+        {{ end }}
+        {{ end }}
+        {{ with .Params.host_name }}
+        <span class="li-matome-info__host">{{ . }}</span>
+        {{ end }}
+      </p>
+    </div>
+  </a>
+</article>

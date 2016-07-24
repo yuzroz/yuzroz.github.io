@@ -1,0 +1,47 @@
+<aside class="sidebar js-sidebar-fixnav">
+  {{ if eq .Params.section "items" }}
+    <!-- レコメンド -->
+    <div class="sidebar-section">
+      <header><div class="title">関連する記事</div></header>
+      <div class="content">
+        {{ range where (where .Site.Pages.ByDate.Reverse ".Params.codename" "!=" "general") "Date.Unix" "<" .Date.Unix }}
+          {{ if and (lt ($.Scratch.Get "related_matches") $.Site.Params.NumRelatedPosts) (ge (intersect (index $.Params $.Site.Params.KeyRelatedPosts) (index .Params $.Site.Params.KeyRelatedPosts) | len) 1) }}
+          <div class="sm">{{ .Render "li" }}</div>
+          {{ $.Scratch.Add "related_matches" 1 }}
+          {{ end }}
+        {{ end }}
+        {{ if not ($.Scratch.Get "related_matches") }}
+          {{ range first $.Site.Params.NumRelatedPosts (where .Site.Pages ".Params.codename" "general") }}
+            <div class="sm">{{ .Render "li" }}</div>
+          {{ end }}
+        {{ end }}
+      </div>
+    </div>
+    <!-- カテゴリ -->
+    <div class="sidebar-section">
+      <div class="sidebar-codenames">
+        <header><div class="title">カテゴリ一覧</div></header>
+        <div class="">
+          {{ partial "codename_cloud.html" . }}
+        </div>
+      </div>
+    </div>
+    <!-- キーワード -->
+    {{ range $key, $value := .Site.Taxonomies }}
+      {{ if and (eq "categories" $key) (gt $value.ByCount 0) }}
+        <div class="sidebar-section">
+          <div class="sidebar-taxonomies">
+            <header><div class="title">人気・おすすめ キーワード</div></header>
+            <div class="content">
+              {{ range first 30 $value.ByCount }}
+                <a href="{{ $.Site.BaseURL}}/{{ $key }}/{{ .Name | urlize }}">
+                  {{ .Name }}
+                </a>
+              {{ end }}
+            </div>
+          </div>
+        </div>
+      {{ end }}
+    {{ end }}
+  {{ end }}
+</aside>

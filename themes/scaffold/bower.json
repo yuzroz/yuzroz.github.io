@@ -1,0 +1,21 @@
+{
+  "name": "scaffold",
+  "description": "Hugo theme",
+  "main": "",
+  "authors": [
+    "yuzroz <yuzuruozawa@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/yuzroz/hugo_theme_scaffold",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "static/lib/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "material-color": "^2.2.1"
+  }
+}

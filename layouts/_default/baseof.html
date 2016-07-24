@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    {{ .Hugo.Generator }}
+    <!-- Scratch variables -->
+    <!-- end Scratch variables -->
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans|Marcellus+SC">
+    <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/{{ with .Site.Params.SyntaxHighlightTheme }}{{ . }}{{ else  }}solarized_dark.min.css{{ end }}">
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/app.css">
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ .Site.BaseURL }}/index.xml">
+    <!-- meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>
+    {{ block "title" . }}
+      {{ if .IsHome }}
+      {{ .Title }}
+      {{ else if .IsNode }}
+      {{ .Title }}に関する{{ .Site.Params.PostAlias }} - {{ .Site.Params.TitleHead }}
+      {{ else }}
+      {{ .Title }} - {{ .Site.Params.TitleHead }}
+      {{ end }}
+    {{ end }}
+    </title>
+    {{ if .IsPage }}
+    <meta name="description" content="{{ .Summary }}">
+    {{ else if .Data.Pages }}
+    <meta name="description" content="{{ range first 1 .Data.Pages }}{{ .Title }}..他{{ $.Scratch.Get "node_page_count" }}{{ .Site.Params.PostAlias }}{{ end }}">
+    {{ end }}
+    <!-- fb -->
+    {{ if .IsHome }}
+    <meta property="og:title" content="{{ .Title }}">
+    <meta property="og:type" content="website">
+    {{ else }}
+    <meta property="og:title" content="{{ .Title }} - {{ .Site.Params.TitleHead }}">
+    <meta property="og:type" content="article">
+    {{ end }}
+    <meta property="og:url" content="{{ .Permalink }}">
+    {{ if .IsPage }}
+    <meta property="og:description" content="{{ .Summary }}">
+    {{ end }}
+    {{ if .Params.image }}
+    <meta property="og:image" content="{{ .Params.image }}">
+    {{ else }}
+    <meta property="og:image" content="{{ .Site.BaseURL }}/img/ball.gif">
+    {{ end }}
+    <!-- tw -->
+    {{ if $.Site.Params.TwitterAccount }}
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@{{ $.Site.Params.TwitterAccount }}">
+    <meta name="twitter:creator" content="@{{ $.Site.Params.TwitterAccount }}">
+    <meta name="twitter:title" content="{{ .Title }}l">
+    {{ if .IsPage }}
+    <meta name="twitter:description" content="{{ .Summary }}">
+    {{ else if .Data.Pages }}
+    <meta name="twitter:description" content="{{ range first 1 .Data.Pages }}{{ .Title }}..他{{ $.Scratch.Get "node_page_count" }}{{ .Site.Params.PostAlias }}{{ end }}">
+    {{ end }}
+    {{ if .Params.image }}
+    <meta name="twitter:image" content="{{ .Params.image }}">
+    {{ end }}
+    {{ end }}
+    <meta name="google-site-verification" content="{{ .Site.Params.GoogleSiteVerification }}" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    {{ if .Site.Params.GoogleAnalyticsCrossDomain }}
+      {{ partial "google_analytics_cross.html" . }}
+    {{ else }}
+      {{ template "_internal/google_analytics.html" . }}
+    {{ end }}
+  </head>
+  <body>
+    <div class="top-border"></div>
+    <!-- メインヘッダー -->
+    <header id="header" class="header">
+      <div class="header__title">
+        <a href="{{ .Site.BaseURL }}">
+        </a>
+      </div>
+    </header>
+    <!-- content -->
+    <div class="container">
+      {{ block "main" . }}
+      {{ end }}
+    </div>
+    <!-- footer -->
+    <footer class="footer">
+      {{ with .Site.Copyright | safeHTML }}
+      <p class="footer-copy">Copyright (c) 2016 {{ . }} All Rights Reserved.</p>
+      {{ end }}
+    </footer>
+    <script type="text/javascript" charset="utf-8" src="{{ .Site.BaseURL }}/js/common.js"></script>
+  </body>
+</html>

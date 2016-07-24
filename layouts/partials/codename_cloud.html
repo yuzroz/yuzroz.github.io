@@ -1,0 +1,10 @@
+{{ range (where $.Site.Pages "Type" "post").GroupByParam "codename" }}
+{{ $key := .Key }}
+{{ range first 1 .Pages }}
+{{ if .Params.taskname }}
+<a href="{{ .Site.BaseURL }}/codename/{{ $key }}/" class="">
+  {{ index .Params.taskname 0 }}
+</a>
+{{ end }}
+{{ end }}
+{{ end }}

@@ -1,0 +1,38 @@
+{
+  "name": "",
+  "description": "Hugo project",
+  "version": "0.0.1",
+  "homepage": "",
+  "license": "Noweb",
+  "author": "",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "bugs": {
+    "type": "git",
+    "url": ""
+  },
+  "main": "",
+  "scripts": {},
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {
+    "grunt": "^1.0.1",
+    "grunt-autoprefixer": "^3.0.4",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-injector": "^1.0.1",
+    "grunt-sass": "^1.2.0",
+    "load-grunt-config": "^0.19.2",
+    "node-bourbon": "^4.2.8",
+    "normalize.css": "^4.2.0",
+    "time-grunt": "^1.3.0"
+  },
+  "devDependencies": {
+    "grunt-este-watch": "^0.1.18",
+    "grunt-postcss": "^0.8.0",
+    "grunt-scss-lint": "^0.3.8"
+  }
+}

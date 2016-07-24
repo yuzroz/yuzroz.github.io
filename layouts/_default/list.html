@@ -1,0 +1,29 @@
+{{ define "main" }}
+<div class="list">
+  <div class="row">
+    <div class="col-sm-8 col-0">
+      <div class="section js-sidebar-main">
+        {{ range first 1 (.Paginate .Data.Pages).Pages }}
+          <header class="list-header" style="background-image: url({{ .Params.image }});">
+            <h1 class="list-header__title">{{ $.Title }}</h1>
+          </header>
+          <h2 class="list-item-head">『{{ $.Title}}』に関する{{ $.Site.Params.PostAlias }}一覧</h2>
+        {{ end }}
+        <div class="content">
+          {{ range (.Paginate .Data.Pages).Pages }}
+          <div class="sm">{{ .Render "li" }}</div>
+          {{ end }}
+        </div>
+      </div>
+
+      {{ partial "pagination.html" . }}
+
+    </div>
+
+    <div class="col-sm-4">
+      {{ partial "sidebar.html" . }}
+    </div>
+
+  </div>
+</div>
+{{ end }}
