@@ -2514,6 +2514,7 @@ body {
 .li a {
   position: relative;
   text-decoration: none;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -2534,7 +2535,8 @@ body {
   position: relative;
   padding: 0;
   min-height: 70px;
-  flex: 1;
+  -ms-flex: 1;
+      flex: 1;
 }
 
 .li-image {
@@ -2596,6 +2598,7 @@ body {
 .li-matome a {
   position: relative;
   text-decoration: none;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -2616,7 +2619,8 @@ body {
   position: relative;
   padding: 0;
   min-height: 70px;
-  flex: 1;
+  -ms-flex: 1;
+      flex: 1;
 }
 
 .li-matome-image {
@@ -2704,8 +2708,10 @@ body {
     padding: 120px 0 100px 0;
   }
   .index-profile {
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
     width: 230px;
     margin: 0 auto;
   }
@@ -2714,7 +2720,8 @@ body {
   }
   .index-profile__me {
     position: relative;
-    flex-basis: 30%;
+    -ms-flex-preferred-size: 30%;
+        flex-basis: 30%;
   }
   .index-profile__me > div {
     width: 57px;
@@ -2725,7 +2732,8 @@ body {
     border: 1px solid #eeeeee;
   }
   .index-profile__detail {
-    flex-basis: 70%;
+    -ms-flex-preferred-size: 70%;
+        flex-basis: 70%;
   }
   .index-profile__detail > h2 {
     background: #fff;
@@ -2762,7 +2770,8 @@ body {
     font-style: normal;
   }
   .index-profile__sns {
-    flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
   }
   .index-profile__sns ul {
     text-align: center;
@@ -2823,8 +2832,10 @@ body {
     padding: 60px 0 100px 0;
   }
   .index-profile {
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
     width: 230px;
     margin: 0 auto;
   }
@@ -2833,7 +2844,8 @@ body {
   }
   .index-profile__me {
     position: relative;
-    flex-basis: 30%;
+    -ms-flex-preferred-size: 30%;
+        flex-basis: 30%;
   }
   .index-profile__me > div {
     width: 57px;
@@ -2844,7 +2856,8 @@ body {
     border: 1px solid #eeeeee;
   }
   .index-profile__detail {
-    flex-basis: 70%;
+    -ms-flex-preferred-size: 70%;
+        flex-basis: 70%;
   }
   .index-profile__detail > h2 {
     background: #fff;
@@ -2881,7 +2894,8 @@ body {
     font-style: normal;
   }
   .index-profile__sns {
-    flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
   }
   .index-profile__sns ul {
     text-align: center;
