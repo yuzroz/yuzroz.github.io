@@ -2,8 +2,8 @@
 
 // lib
 @import "./../../node_modules/normalize.css/normalize";
-@import "./../lib/bower_components/material-color/material-color";
-@import "./../lib/bower_components/material-color/mixins/class-generator";
+@import "./../../node_modules/material-design-color/material-color";
+@import "./../../node_modules/material-design-color/mixins/class-generator";
 
 // injector:global
 @import "./../../themes/scaffold/static/sass/global/color";
