@@ -1,0 +1,103 @@
+@charset "utf-8";
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-size: inherit;
+  color: $clr-black;
+  background-color: $clr-white;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+html,
+body {
+  margin: 0;
+}
+
+a {
+  transition-duration: .2s;
+  color: $clr-light-blue;
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba($clr-blue, .2);
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $clr-blue-800;
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+code {
+  font-size: .8rem;
+  line-height: 1rem;
+
+  &:not(.hljs) {
+    background-color: $clr-grey-100;
+    border-bottom: 1px solid $clr-grey-200;
+    color: $clr-black;
+    font-size: .8rem;
+    border-radius: 2px;
+  }
+}
+
+pre {
+  font-size: .8rem;
+  line-height: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+h1 {
+  font-size: 1.6rem;
+  line-height: 2rem;
+}
+
+h2 {
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+
+h3 {
+  font-size: 1.1rem;
+  line-height: 2rem;
+}
+
+h4,
+h5 {
+  font-size: 1rem;
+  line-height: 1rem;
+}
+
+div,
+span,
+p,
+a {
+  word-wrap: break-word;
+}
+
+ul,
+li,
+ul li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+

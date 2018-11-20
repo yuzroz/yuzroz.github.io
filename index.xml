@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>yuzroz </title>
+    <link>https://yuzroz.github.io/</link>
+    <description>Recent content in yuzroz on yuzroz</description>
+    
+    <language>ja-JP</language>
+    
+    
+    <rights>(C) 1</rights>
+    <updated>0001-01-01 00:00:00 &#43;0000 UTC</updated>
+    
+    <docs>/</docs>
+    <atom:link href="/" rel="self" type="application/rss+xml" />
+
+    
+      
+        <item>
+          <title>別のサイトにジャンプしようとしています。宜しければ上記のリンクをクリックしてください</title>
+          <link>https://yuzroz.github.io/external-link/</link>
+          <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+          
+          <guid>https://yuzroz.github.io/external-link/</guid>
+          <description></description>
+        </item>
+      
+    
+  </channel>
+</rss>

@@ -1,0 +1,10 @@
+//  Usage:
+//    @media #{$media-desktop} {...}
+
+
+$media-iphone5: "screen and (max-width: 349px)";
+$media-iphone6: "screen and (max-width: 409px) and (min-width: 350px)";
+$media-iphone6p: "screen and (max-width: 479px) and (min-width: 410px)";
+$media-ipad: "screen and (max-width: 767px) and (min-width: 480px)";
+$media-desktop: "screen and (min-width: 1200px)";
+$media-non-desktop: "screen and (max-width: 1199px)";

@@ -1,0 +1,60 @@
+@charset "utf-8";
+
+/* テキストを隠す */
+@mixin rm-text {
+  position: absolute;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+}
+
+
+/* Clear the float:float要素の親に指定 */
+@mixin clearfix {
+  zoom: 1;
+
+  &:before,
+  &:after {
+    display: block;
+    height: 0;
+    visibility: hidden;
+    content: "\0020";
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+/* グラデーションテキスト */
+@mixin gradient-text($text, $background, $gradient) {
+  background: $clr-white;
+  color: $clr-black;
+  position: relative;
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    pointer-events: none;
+  }
+
+  &::before {
+    background: $gradient;
+    content: "";
+    display: block;
+    mix-blend-mode: screen;
+  }
+
+  &::after {
+    content: $text;
+    background: $background;
+
+    color: $clr-white;
+    mix-blend-mode: multiply;
+  }
+}
