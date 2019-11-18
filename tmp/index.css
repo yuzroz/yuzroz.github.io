@@ -1,0 +1,720 @@
+#div1 {
+  text-align: center;
+}
+
+@keyframes rotate360 {
+  0% {
+    transform: rotate(0deg)
+  }
+
+  100% {
+    transform: rotate(360deg)
+  }
+}
+.cf:before,.cf:after {
+  content: " ";
+  display: table
+}
+
+.cf:after {
+  clear: both
+}
+
+.cf {
+  *zoom:1}
+
+li {
+  list-style: none
+}
+
+a {
+  color: #2f2f2f;
+  text-decoration: none
+}
+
+dt {
+  font-weight: normal
+}
+
+@-ms-viewport {
+  width: auto !important;
+  initial-scale: 1 !important
+}
+
+
+a {
+  color: #658
+}
+
+html,body {
+  height: 100%;
+  min-height: 100%;
+  position: relative;
+  margin: 0;
+  padding: 0
+}
+
+body {
+  font-size: 10px;
+  font-family: 'Roboto',Arial,sans-serif;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch
+}
+
+#global-header {
+  z-index: 10;
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  top: 0;
+  background-color: #fff;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap
+}
+
+#global-header>.logo-and-title {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -ms-flex-negative: 2;
+  flex-shrink: 2;
+  -ms-flex-preferred-size: 445px;
+  flex-basis: 445px;
+  max-width: 445px;
+  margin-left: 32px;
+  height: 100%
+}
+
+#global-header>.logo-and-title>a {
+  display: block;
+  width: 135px;
+  height: 50px;
+  background: url(https://cashflow.orixbank.co.jp/img/common/header-logo.png) 0 8px no-repeat;
+  background-size: 100%
+}
+
+#global-header>.logo-and-title>span {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: auto auto auto 20px;
+  height: 50px;
+  background-size: 100%;
+  color: #8a8a8a
+}
+
+#global-header>.financing>span {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  color: #000;
+  font-weight: bold;
+  line-height: 14px;
+  position: relative;
+  top: -2px
+}
+
+#global-header>.financing>span>strong {
+  font-size: 1.8rem;
+  color: #EB5569;
+  font-weight: bold;
+  margin: 0 2px
+}
+
+#global-header>.financing>span:nth-child(2) {
+  font-weight: normal;
+  color: #8a8a8a
+}
+
+#global-header>ul.menu li.item a {
+  color: #444;
+  text-decoration: none;
+  transition-property: background-color;
+  transition-duration: .3s;
+  background-color: transparent;
+  padding: 0 10.5px;
+  height: 50px;
+  line-height: 50px;
+  font-weight: bold;
+  font-family: 'Hiragino Kaku Gothic ProN';
+  font-size: 12px;
+  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0,0,0,0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  overflow: hidden
+}
+
+#global-header>ul.menu li.item a:hover {
+  background-color: #ACA3CD
+}
+
+#global-header>ul.menu li.item a:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  background: #d2d3de;
+  height: 4px;
+  transition-property: left,right;
+  transition-duration: .3s;
+  transition-timing-function: ease-out
+}
+
+#global-header>ul.menu li.item a:hover:before,#global-header>ul.menu li.item a:active:before,#global-header>ul.menu li.item a.active:before {
+  left: 0;
+  right: 0
+}
+
+
+#global-header>ul.menu-user li.item a {
+  height: 50px;
+  color: #444;
+  text-decoration: none;
+  transition-property: background-color;
+  transition-duration: .25s;
+  background-color: transparent;
+  padding: 7px 12px 0 12px;
+  text-align: center;
+  font-weight: bold;
+  display: inline-block;
+  vertical-align: middle;
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0,0,0,0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  overflow: hidden
+}
+
+
+#global-header>ul.menu-user li.item a:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  background: #d2d3de;
+  height: 4px;
+  transition-property: left,right;
+  transition-duration: .3s;
+  transition-timing-function: ease-out
+}
+
+#global-header>ul.menu-user li.item a:hover:before,#global-header>ul.menu-user li.item a:active:before,#global-header>ul.menu-user li.item a.active:before {
+  left: 0;
+  right: 0
+}
+
+#global-header>ul.menu-user li.item.profile a {
+  padding: 0 9px 0 0;
+  display: table-cell;
+  vertical-align: middle
+}
+
+#global-header>ul.menu-user li.item.profile .user-icon-submitted img {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px
+}
+
+#global-header>ul.menu-contact>li.item a {
+  display: inline-block;
+  width: 100%;
+  padding: 6px 13px 6px 28px;
+  border: 1px solid #6e5faa;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  height: 26px;
+  background-image: url(../img/common/header-arrow-right-w.svg);
+  background-size: 6px 100%;
+  background-repeat: no-repeat;
+  background-position: 10px 0;
+  text-decoration: none
+}
+
+#global-header>ul.menu-contact>li.item a:hover {
+  color: #fff;
+  background-color: #6e5faa
+}
+
+
+#global-footer ul.menu li.item a {
+  color: #9b9b9b;
+  text-decoration: none;
+  display: inline-block;
+  padding: 6px
+}
+
+#global-footer ul.menu li.item a:hover {
+  text-decoration: underline
+}
+
+#global-footer ul.menu-right li.item a {
+  color: #9b9b9b;
+  display: inline-block;
+  padding: 6px
+}
+
+#global-footer ul.menu-right li.item a:hover {
+  text-decoration: underline
+}
+
+#global-footer ul.menu-right li.item.leeways span.text span {
+  font-size: .9rem
+}
+
+#global-footer ul.menu-right li.item.tel a {
+  text-decoration: underline
+}
+
+#main {
+  padding: 50px 0 0 0;
+  -webkit-transition: all .2s cubic-bezier(.24, .8, .55, .94) 0s;
+  -moz-transition: all .2s cubic-bezier(.24, .8, .55, .94) 0s;
+  -o-transitino: all .2s cubic-bezier(.24, .8, .55, .94) 0s;
+  transition: all .2s cubic-bezier(.24, .8, .55, .94) 0s;
+  box-sizing: border-box
+}
+
+@media screen and (max-width: 767px) {
+  #main {
+    padding:50px 0 0 0
+  }
+}
+
+
+@keyframes ripple-animation {
+  from {
+    transform: scale(1);
+    opacity: .4
+  }
+
+  to {
+    transform: scale(100);
+    opacity: 0
+  }
+}
+
+/* registration.css */
+#registration-view {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  opacity: 1;
+  box-sizing: border-box
+}
+
+#registration-view a {
+  color: #9084bb;
+  text-decoration: none;
+  font-weight: bold
+}
+
+#registration-view a:hover {
+  opacity: .8;
+  text-decoration: none
+}
+
+#registration-view div.bg-pic {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  transform: translateX(-50%) translateY(-50%);
+  background-image: url(https://cashflow.orixbank.co.jp/img/registration/registration-bg.jpg);
+  background-size: cover;
+  transition: 1s opacity
+}
+
+#registration-view .content {
+  display: table
+}
+
+#registration-view .content .input-wrapper input[type="checkbox"] {
+  margin: 2px 0 0 100px !important;
+  width: 15px
+}
+
+#registration-view .content .input-area ul.input-list li.item label {
+  min-width: 100px;
+  font-size: 1.2rem !important;
+  height: 25px;
+  padding: 6px 6px 6px 0;
+  margin-bottom: 0;
+  color: #444;
+  box-sizing: border-box;
+  text-align: left;
+  font-weight: normal
+}
+
+#registration-view .content .input-area ul.input-list li.item input {
+  display: block;
+  font-size: 1.2rem;
+  height: 25px;
+  padding: 6px;
+  margin: 0 0 6px;
+  color: #202020;
+  border: 1px solid #b3b3b3;
+  border-radius: 0;
+  background-color: transparent !important;
+  box-sizing: border-box
+}
+
+#registration-view .content .input-area ul.input-list li.item input::-webkit-input-placeholder {
+  -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+  background-color: transparent !important;
+  color: #a5a4a4
+}
+
+#registration-view .content .input-area ul.input-list li.item input:hover {
+  border: 1px solid #8a8a8a !important
+}
+
+#registration-view .content .input-area ul.input-list li.item input:focus {
+  border: 1px solid #6e5faa !important;
+  outline: 0
+}
+
+#registration-view .content .input-area ul.input-list li.item .select-wrap select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+  width: 100%;
+  height: 25px;
+  font-size: 1.2rem !important;
+  line-height: 25px !important;
+  color: #202020;
+  background: transparent;
+  position: relative;
+  z-index: 1;
+  padding: 0 6px 0 6px;
+  border: 1px solid #b3b3b3;
+  border-radius: 0
+}
+
+#registration-view .content .input-area ul.input-list li.item .select-wrap select::-ms-expand {
+  display: none
+}
+
+#registration-view .content .input-area ul.input-list li.item .select-wrap select:hover {
+  border-color: #8a8a8a
+}
+
+#registration-view .content .input-area ul.input-list li.item .select-wrap select:focus {
+  border-color: #6e5faa
+}
+
+#registration-view .content .input-area ul.input-list li.item.gender .select-wrap {
+  width: 200px
+}
+
+#registration-view .content .input-area ul.input-list li.item.gender select.form-control {
+  max-width: 100%
+}
+
+#registration-view .content .input-area ul.input-list li.item.birthday .select-wrap {
+  float: left;
+  width: 70px
+}
+
+#registration-view .content .input-area ul.input-list li.item.birthday .select-wrap.year {
+  width: 72px
+}
+
+#registration-view .content .input-area ul.input-list li.item.birthday .select-wrap.months {
+  width: 58px;
+  margin: 0 0 0 6px
+}
+
+#registration-view .content .input-area ul.input-list li.item.birthday .select-wrap.days {
+  width: 58px;
+  margin: 0 0 0 6px
+}
+
+#registration-view .content .input-area ul.input-list li.item.address .select-wrap {
+  width: 200px;
+  margin-bottom: 7px
+}
+
+#registration-view .content .input-area ul.input-list li.item.address .select-wrap select {
+  max-width: 100%
+}
+
+#registration-view .content .input-area ul.input-list li.item input.form-control:-webkit-autofill {
+  box-shadow: 0 0 0 1000px transparent inset !important;
+  background-color: transparent !important;
+  color: #bfbfbf !important
+}
+
+#registration-view .content .input-area ul.input-list li.item input.form-control:-webkit-autofill {
+  box-shadow: 0 0 0 1000px transparent inset !important;
+  background-color: transparent !important;
+  color: #bfbfbf !important
+}
+
+#registration-view .content .input-area ul.input-list li.item .form-error {
+  margin: 0;
+  margin-top: -4px
+}
+
+#registration-view .content .input-area ul.input-list li.item .input-name-area {
+  width: calc(100% - 45px);
+  overflow: hidden
+}
+
+#registration-view .content .input-area ul.input-list li.item .input-name-area .input-wrapper {
+  float: left;
+  width: 48% !important;
+  margin-right: 2%
+}
+
+#registration-view .content .input-area ul.input-list li.item .input-name-area .input-wrapper input {
+  width: 100%
+}
+
+#registration-view .content .input-area ul.input-list .radio input {
+  display: none
+}
+
+#registration-view .content .input-area div.menu p {
+  float: left;
+  width: 50%;
+  height: 100%;
+  line-height: 2.4em;
+  text-align: center
+}
+
+#registration-view .content .input-area div.menu p:last-child {
+  border-right: none
+}
+
+#registration-view .content .input-area div.menu p a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 1.1rem;
+  color: #aca3cd;
+  text-decoration: none;
+  font-weight: bold
+}
+
+#registration-view .content .input-area div.menu p a:hover {
+  opacity: .8
+}
+
+#registration-view .content .login-hold {
+  margin: 5px 0;
+  text-align: center;
+  font-size: 1.2rem
+}
+
+#registration-view .content .login-hold input {
+  width: 20px !important;
+  margin: 4px 0 0 0
+}
+
+#registration-view .content .link a {
+  display: inline-block;
+  padding: 0 4px;
+  line-height: 1.8em;
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: #aca3cd;
+  font-weight: bold
+}
+
+#registration-view .content .link a:hover {
+  opacity: .8
+}
+
+#registration-view .content .attention {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  font-size: 1.3rem;
+  color: #606060;
+  margin: 10px 0 10px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  font-weight: bold
+}
+#registration-view .content.active {
+  width: 500px;
+  display: block;
+  opacity: 1;
+  padding: 20px 30px 30px;
+  background-color: #fff;
+  border-left: 2px solid #d70368;
+  border-right: 2px solid #fab393;
+  box-sizing: border-box;
+  position: relative;
+}
+
+#registration-view .content.active figure.logo {
+  width: 180px;
+  margin: 0 auto 20px;
+}
+
+#registration-view .content.active figure.logo img {
+  width: 100%;
+  height: auto
+}
+
+#registration-view .content.active:before, #registration-view .content.active:after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(to right, #d70368, #fab393);
+}
+#registration-view .content.active:before {
+  top: 0;
+  left: 0;
+}
+#registration-view .content.active:after {
+  bottom: 0;
+  left: 0;
+}
+
+#registration-view .content.signup .signup-form-content .submit-area a.btn>span:first-of-type {
+  font-size: 2em
+}
+
+#registration-view .content.signup input {
+  width: 200px
+}
+
+#registration-view .content.signup .agreement>a {
+  font-size: 1.1em;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: white;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 10px
+}
+
+#registration-view .content.signup .agreement>a>span:first-of-type {
+  font-size: 2em
+}
+
+#registration-view .content.signup .input-area .input-list li.item label {
+  font-size: 1rem
+}
+
+#registration-view .content.signup .input-area li.item.tel div.input-tel input {
+  width: 56px
+}
+
+#registration-view .content.signup .input-area .link a {
+  float: left;
+  margin: 0 0 0 70px
+}
+
+#registration-view .content.signup .input-area .link a:last-child {
+  margin: 0;
+  text-align: right;
+  float: right;
+  background: transparent;
+  text-decoration: underline
+}
+
+#registration-view .content.signup .input-area .menu:nth-of-type(1) p {
+  text-align: center;
+  width: auto;
+  display: inline-block;
+  line-height: 1.5em;
+  margin: 0 5px;
+  padding: 0 5px;
+  border-bottom: 1px solid #6e5faa
+}
+
+#registration-view .content.signup .input-area .menu:nth-of-type(1) p:hover {
+  border-bottom: none
+}
+
+#registration-view .content.signup .input-area .menu:last-of-type p {
+  text-align: center;
+  float: none;
+  width: auto;
+  display: inline-block;
+  line-height: 1.5em;
+  margin: 0 5px;
+  padding: 0 5px
+}
+
+#registration-view .content.login {
+  margin: calc(50vh - 50px - 192px) 0 50px 0;
+}
+#registration-view .content.login form {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+#registration-view .content.login h3 {
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+
+#registration-view .content.login .period {
+  display: block;
+  font-size: 1.4rem;
+  line-height: 2em;
+  color: #cb434f;
+  font-weight: bold;
+}
+
+#registration-view .content.login .message {
+  display: inline-block;
+  text-align: left;
+  font-size: 1.3rem;
+  color: #606060;
+  margin: 10px 0 10px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  font-weight: bold;
+}
